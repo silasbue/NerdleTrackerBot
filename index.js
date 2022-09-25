@@ -4,7 +4,7 @@ const data = require("./data.json")
 require("dotenv").config()
 
 const client = new Discord.Client({
-  intents: ["Guilds", "GuildMessages", "MessageContent"],
+  intents: ["Guilds", "GuildMessages", "MessageContent", "GuildMembers"],
 });
 
 client.on("ready", () => {
@@ -44,10 +44,11 @@ client.on("messageCreate", (message) => {
         break;
       case 6:
         message.react('⚰️');
-        message.react('🇫')
+        message.react('🇫');
         break;
       default:
-        message.react('⛔')
+        message.react('⛔');
+        message.member.roles.add(message.guild.roles.cache.find((role) => role.name == 'test'))
     }
   }
 })
