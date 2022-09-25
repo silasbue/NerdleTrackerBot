@@ -26,6 +26,29 @@ client.on("messageCreate", (message) => {
     saveScoreboard(scores);
 
     message.reply(`Submitted! Your total score since last reset: ${scores[message.author]}`);
+    switch (tries){
+      case 1:
+        message.react('🥇');
+        break;
+      case 2:
+        message.react('🥈');
+        break;
+      case 3:
+        message.react('🥉');
+        break;
+      case 4:
+        message.react('🤦');
+        break;
+      case 5:
+        message.react('💩');
+        break;
+      case 6:
+        message.react('⚰️');
+        message.react('🇫')
+        break;
+      default:
+        message.react('⛔')
+    }
   }
 })
 
