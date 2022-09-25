@@ -1,4 +1,6 @@
 const Discord = require("discord.js");
+const fs = require("fs");
+const data = require("./data.json")
 require("dotenv").config()
 
 const client = new Discord.Client({
@@ -11,8 +13,32 @@ client.on("ready", () => {
 
 client.on("messageCreate", (message) => {
   if (message.content.startsWith('nerdlegame')) {
-    message.reply('i recognise this message as a nerdle message')
+    if (!scores[message.author]) {
+      scores[message.author] = 0
+    }
+    let strArr = message.content.split("/")
+    let tries = strArr[0]
+    tries = Number(tries[tries.length-1])
+    console.log(tries);
+
+    scores[message.author] += tries
+
+    saveScoreboard(scores);
+
+    message.reply(`Submitted! Your total score since last reset: ${scores[message.author]}`);
   }
 })
 
-client.login(process.env.TOKEN)
+function saveScoreboard(scoreboard){
+  fs.writeFile('data.json', JSON.stringify(scoreboard), (err) =>{
+    if (err) {
+      throw new err;
+    }
+    console.log('JSON data was stored!');
+  })
+}
+
+client.login(process.env.TOKEN);
+scores = data
+console.log(scores);
+
