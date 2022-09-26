@@ -21,7 +21,7 @@ Discord Nerdle Tracker Bot
 10. Clone this repository.
 12. Run `npm install` in the terminal from the root folder of this project.
 13. Create a new file called `.env`
-14. Insert `TOKEN=<yourBotTokenFromStep3>`
+14. Insert `TOKEN=<yourBotTokenFromStep3>` in the `.env` file.
 15. Run `npm run dev` in the terminal
 
 Your discord bot should now be running on your server. Test this by sending a message with your nerdle result.
