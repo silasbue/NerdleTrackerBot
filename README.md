@@ -24,4 +24,4 @@ Discord Nerdle Tracker Bot
 14. Insert `TOKEN=<yourBotTokenFromStep3>` in the `.env` file.
 15. Run `npm run dev` in the terminal
 
-Your discord bot should now be running on your server. Test this by sending a message with your nerdle result.
+Your discord bot should now be running on your discord server. Test this by sending a message with your nerdle result.
