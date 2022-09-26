@@ -2,7 +2,7 @@
 
 Discord Nerdle Tracker Bot
 
-## Dev Setup Guide
+## Early Dev Setup Guide
 
 ### Create your own discord bot
 
