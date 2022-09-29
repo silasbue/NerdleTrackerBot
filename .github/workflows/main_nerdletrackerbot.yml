@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'NerdleTrackerBot'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F08FE0C17AB74A45B68996553DE2DAFF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4BFF3482D1644E6D8506A24F029E8846 }}
           package: .
